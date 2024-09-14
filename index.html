@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>PDF Processor</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Lottie and GSAP Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.0/dist/lottie-player.js"></script>
+</head>
+
+<body>
+  <!-- Step 1: PDF Upload -->
+  <div class="pdf-upload" id="uploadSection">
+    <lottie-player src="assets/upload-animation.json" background="transparent" speed="1" loop autoplay></lottie-player>
+    <input type="file" id="pdfInput" accept="application/pdf">
+    <label for="pdfInput">Upload Your PDF</label>
+  </div>
+
+  <!-- Step 2: Loading Animation -->
+  <div class="loading-animation" id="loadingScreen">
+    <lottie-player src="assets/loading-animation.json" background="transparent" speed="1" loop autoplay></lottie-player>
+    <p>Extracting Data from PDF...</p>
+  </div>
+
+  <!-- Step 3: Preprocessing Progress Bar -->
+  <div class="progress-bar" id="preprocessBar">
+    <div class="progress" id="progress"></div>
+  </div>
+
+  <!-- Step 4: Success Animation -->
+  <div class="output-success" id="outputSuccess">
+    <lottie-player src="assets/success-animation.json" background="transparent" speed="1" loop autoplay></lottie-player>
+    <p>Processing Complete! Your file has been saved.</p>
+  </div>
+
+  <!-- Step 5: Error Animation -->
+  <div class="error-animation" id="errorScreen">
+    <lottie-player src="assets/error-animation.json" background="transparent" speed="1" loop autoplay></lottie-player>
+    <p>There was an error processing the PDF. Please try again.</p>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/scripts.js"></script>
+</body>
+</html>
