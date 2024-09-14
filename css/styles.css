@@ -1,0 +1,144 @@
+/* General Body Style */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  color: #00bcd4;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* PDF Upload Section */
+.pdf-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+  width: 80%;
+  border: 2px dashed #00bcd4;
+  border-radius: 15px;
+  background-color: #ffffff;
+  transition: 0.3s all ease;
+}
+
+.pdf-upload:hover {
+  background-color: #e0f7fa;
+  border-color: #00796b;
+}
+
+.pdf-upload input {
+  display: none;
+}
+
+.pdf-upload label {
+  font-size: 18px;
+  color: #00bcd4;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+}
+
+/* Keyframes for Animation */
+@keyframes pulse {
+  0%, 100% {
+    color: #00bcd4;
+  }
+  50% {
+    color: #00796b;
+  }
+}
+
+/* Loading Animation */
+.loading-animation {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.loading-animation.show {
+  display: flex;
+}
+
+.loading-animation p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00bcd4;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 80%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  margin: 20px 0;
+  overflow: hidden;
+  display: none;
+}
+
+.progress-bar.show {
+  display: block;
+}
+
+.progress {
+  width: 0;
+  height: 100%;
+  background-color: #00bcd4;
+  border-radius: 10px;
+}
+
+/* Success Output */
+.output-success {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.output-success.show {
+  display: flex;
+}
+
+.output-success p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #00796b;
+  text-align: center;
+}
+
+/* Error Screen */
+.error-animation {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.error-animation.show {
+  display: flex;
+}
+
+.error-animation p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #e57373;
+  text-align: center;
+}
